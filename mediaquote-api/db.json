@@ -1,0 +1,24 @@
+{
+  "quotes": [
+    {"id": 0, "game": "Mass Effect 2", "character": "Commander Shepard", "quote": "I'm Commander Shepard, and this is my favorite store on the Citadel!"},
+    {"id": 1, "game": "Duke Nukem", "character": "Duke Nukem", "quote": "It's time to kick ass and chew bubble gum…and I'm all outta gum."},
+    {"id": 2, "game": "Castlevania: Symphony of the Night", "character": "Dracula", "quote": "What is a man? A Miserable little pile of secrets!"},
+    {"id": 3, "game": "Metal Gear Solid", "character": "Solid Snake", "quote": "We're not tools of the government or anyone else. Fighting was the only thing I was good at, but at least I always fought for what I believed in."},
+    {"id": 4, "game": "Max Payne", "character": "Max Payne", "quote": "They were all dead. The final gunshot was an exclamation mark to everything that had led to this point. I released my finger from the trigger. And then it was over."},
+    {"id": 5, "game": "Resident Evil", "character": "Barry Burton", "quote": "You were almost a Jill sandwich!"},
+    {"id": 6, "game": "Assassin's Creed II", "character": "Ezio Auditore", "quote": "It's a-me, Mario!"},
+    {"id": 7, "game": "Max Payne", "character": "Max Payne", "quote": "The sun went down with practiced bravado. Twilight crawled across the sky, laden with foreboding. I didn't like the way the show started. But they had given me the best seat in the house. Front row center."},
+    {"id": 8, "game": "Half-Life 2", "character": "G-Man", "quote": "The right man in the wrong place can make all the difference in the world."},
+    {"id": 9, "game": "Mortal Kombat", "character": "Shao Kahn", "quote": "FINISH HIM!"},
+    {"id": 10, "game": "Bioshock", "character": "Andrew Ryan", "quote": "Would you kindly…"},
+    {"id": 11, "game": "Call of Duty: Modern Warfare", "character": "Captain Price", "quote": "The healthy human mind doesn't wake up in the morning thinking this is its last day on Earth. But I think that's a luxury, not a curse. To know you're close to the end is a kind of freedom. Good time to take… inventory."},
+    {"id": 12, "game": "Red Dead Redemption", "character": "John Marston", "quote": "Some trees flourish, others die. Some cattle grow strong, others are taken by wolves. Some men are born rich enough and dumb enough to enjoy their lives. Ain't nothing fair."},
+    {"id": 13, "game": "Far Cry 2", "character": "The Jackal", "quote": "You can't break a man the way you break a dog or a horse. The harder you beat a man, the taller he stands."},
+    {"id": 14, "game": "Fallout", "character": "Narrator", "quote": "War…war never changes"},
+    {"id": 15, "game": "Dragon Age: Origins", "character": "Flemeth", "quote": "The world fears the inevitable plummet into the abyss. Watch for that moment and when it comes, do not hesitate to leap. It is only when you fall that you learn whether you can fly."},
+    {"id": 16, "game": "Portal 2", "character": "GLaDOS", "quote": "Most test subjects do experience some cognitive deterioration after a few months in suspension. Now you've been under for… quite a lot longer, and it's not out of the question that you might have a very minor case of serious brain damage. But don't be alarmed, alright? Although, if you do feel alarmed, try to hold onto that feeling because that is the proper reaction to being told you have brain damage."},
+    {"id": 17, "game": "Assassin's Creed franchise", "character": "Ezio Auditore", "quote": "Nothing is true, everything is permitted."},
+    {"id": 18, "game": "The Legend of Zelda", "character": "Old Man", "quote": "It's dangerous to go alone, take this!"},
+    {"id": 19, "game": "Metal Gear Solid 3: Snake Eater", "character": "The Boss", "quote": "I raised you, and loved you, I've given you weapons, taught you techniques, endowed you with knowledge. There's nothing more for me to give you. All that's left for you to take in my life."}
+  ]
+}

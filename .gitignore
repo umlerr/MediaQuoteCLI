@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyCharm
+.idea/
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Local DB и конфиг
+*.db
+.env
+
+# OS
+.DS_Store
+Thumbs.db
