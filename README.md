@@ -160,8 +160,6 @@ pytest tests/tests_deepseek/ -v
 
 ## 8. Скриншоты работы
 
-## 8. Скриншоты работы
-
 ### Claude — справка по CLI
 ![Claude help](docs/claude/screenshots/1.png)
 

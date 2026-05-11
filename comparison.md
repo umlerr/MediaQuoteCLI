@@ -216,15 +216,15 @@ DeepSeek сразу начал писать код без уточняющих �
 
 ## 9. Техническое сравнение версий
 
-| Параметр | `claude/` | `deepseek/` |
-|---|---|---|
-| Внешний API | ZenQuotes | ZenQuotes |
-| Собственный API | FastAPI (`mediaquote-api/`) | FastAPI (`mediaquote_api/`) |
-| Датасет фильмов | 753 цитаты (`movie_quotes.txt`) | 10 цитат (встроенный) |
-| Датасет игр | 20 цитат (`db.json`) | 10 цитат (встроенный) |
-| Групп команд CLI | 9 | 7 |
-| Интерактивный диалог | есть | нет |
-| Экспорт | JSON, CSV | JSON, CSV, Markdown |
+| Параметр | `claude/` | `deepseek/`                                 |
+|---|---|---------------------------------------------|
+| Внешний API | ZenQuotes | ZenQuotes                                   |
+| Собственный API | FastAPI (`mediaquote-api/`) | FastAPI (`mediaquote_api/`)                 |
+| Датасет фильмов | 753 цитаты (`movie_quotes.txt`) | Изначально предложил 10 цитат (встроенный)  |
+| Датасет игр | 20 цитат (`db.json`) | Изначально предложил 10 цитат (встроенный)  |
+| Групп команд CLI | 9 | 7                                           |
+| Интерактивный диалог | есть | нет                                         |
+| Экспорт | JSON, CSV | JSON, CSV, Markdown                         |
 | Хранилище | SQLite (quotes, favorites, ratings) | SQLite (favorites, ratings, export_history) |
-| Тесты | 70 тестов, storage + api_client + CLI | 31 тест, database + api_client |
-| Итераций до результата | 5-6 | 9-11 |
+| Тесты | 70 тестов, storage + api_client + CLI | 31 тест, database + api_client              |
+| Итераций до результата | 5-6 | 9-11                                        |
