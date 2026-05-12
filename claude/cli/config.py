@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class Config:
     CONFIG_DIR = Path.home() / ".mediaquote"
     CONFIG_FILE = CONFIG_DIR / "config.json"

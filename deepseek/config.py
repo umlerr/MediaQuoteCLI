@@ -1,5 +1,4 @@
 """Конфигурация приложения"""
-import os
 from pathlib import Path
 
 HOME_DIR = Path.home()

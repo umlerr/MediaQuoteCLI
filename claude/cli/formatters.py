@@ -1,12 +1,13 @@
 """Rich форматтеры"""
-import json
 import csv
+import json
 from io import StringIO
-from typing import List, Dict, Optional
-from rich.console import Console
-from rich.table import Table
-from rich.panel import Panel
+from typing import List, Dict
+
 from rich import box
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
 
 console = Console()
 
@@ -15,6 +16,8 @@ COLORS = {"zenquotes": "cyan", "local-api": "magenta", "local": "yellow"}
 
 
 def _icon(t): return ICONS.get(t, "📝")
+
+
 def _color(a): return COLORS.get(a, "white")
 
 
@@ -29,7 +32,7 @@ def fmt_panel(q: Dict, rating=None, is_fav=False):
 
     console.print(Panel(
         f'[italic]"{q["content"]}"[/italic]\n\n'
-        f'[bold]— {q.get("author","Unknown")}[/bold]'
+        f'[bold]— {q.get("author", "Unknown")}[/bold]'
         + (f'  [dim]({source})[/dim]' if source and source != q.get("author") else "")
         + tags_str + rating_str,
         title=f'{icon} [{color}]{q["id"]}[/{color}]{fav}',
@@ -52,12 +55,13 @@ def fmt_table(quotes: List[Dict]):
         content = q.get("content", "")
         short = content[:70] + "…" if len(content) > 70 else content
         source = q.get("source", "") or ""
-        if source == q.get("author"): source = ""
+        if source == q.get("author"):
+            source = ""
         qid = q.get("id", "")
         short_id = qid[:12] if len(qid) > 12 else qid
         stype = q.get("source_type", "")
         type_label = {"person": "person", "movie": "movie", "game": "game"}.get(stype, stype)
-        table.add_row(short_id, type_label, short, q.get("author","Unknown"), source)
+        table.add_row(short_id, type_label, short, q.get("author", "Unknown"), source)
     console.print(table)
     console.print(f"[dim]Найдено: {len(quotes)}[/dim]")
 
@@ -86,7 +90,8 @@ def fmt_export(quotes: List[Dict], fmt: str) -> str:
         return json.dumps(quotes, ensure_ascii=False, indent=2)
     out = StringIO()
     if quotes:
-        w = csv.DictWriter(out, fieldnames=["id","content","author","source","source_type","api"], extrasaction="ignore")
+        w = csv.DictWriter(out, fieldnames=["id", "content", "author", "source",
+                                            "source_type", "api"], extrasaction="ignore")
         w.writeheader()
         w.writerows(quotes)
     return out.getvalue()

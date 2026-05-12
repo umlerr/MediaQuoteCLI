@@ -18,7 +18,8 @@ def random(save: bool = typer.Option(False, "--save", "-s")):
     quote = api.get_random_quote("movie")
     if quote:
         panel = Panel(
-            f"[italic]{quote['quote']}[/italic]\n\n[bold cyan]— {quote['author']}[/bold cyan]\n[dim]Фильм: {quote['source']}[/dim]",
+            f"[italic]{quote['quote']}[/italic]\n\n[bold cyan]— {quote['author']}"
+            f"[/bold cyan]\n[dim]Фильм: {quote['source']}[/dim]",
             title="🎬 Random Movie Quote",
             border_style="blue"
         )

@@ -1,3 +1,9 @@
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green)
+![Tests Claude](https://img.shields.io/badge/tests%20claude-70%20passed-brightgreen)
+![Tests DeepSeek](https://img.shields.io/badge/tests%20deepseek-31%20passed-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 # MediaQuote CLI
 
 Утилита командной строки для поиска, просмотра и управления цитатами из трёх источников: высказывания известных людей, цитаты из фильмов и цитаты из видеоигр.

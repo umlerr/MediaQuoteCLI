@@ -55,7 +55,8 @@ class Database:
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = sqlite3.Row
             cursor = conn.execute(
-                "SELECT id, quote, author, source, content_type, rating, created_at FROM favorites ORDER BY created_at DESC"
+                "SELECT id, quote, author, source, content_type, rating, "
+                "created_at FROM favorites ORDER BY created_at DESC"
             )
             return [dict(row) for row in cursor.fetchall()]
 

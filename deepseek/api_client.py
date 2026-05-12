@@ -100,30 +100,11 @@ class APIClient:
         except Exception:
             return []
 
-    def get_movie_quotes(self, movie_title: str) -> List[Dict]:
-        try:
-            with httpx.Client(timeout=REQUEST_TIMEOUT) as client:
-                r = client.get(f"{self.local_api}/movies/quotes?movie={movie_title}&limit=20")
-                r.raise_for_status()
-                return r.json()
-        except Exception:
-            return []
-
-    def get_game_quotes(self, game_title: str) -> List[Dict]:
-        try:
-            with httpx.Client(timeout=REQUEST_TIMEOUT) as client:
-                r = client.get(f"{self.local_api}/games/quotes?game={game_title}&limit=20")
-                r.raise_for_status()
-                return r.json()
-        except Exception:
-            return []
-
     def get_sources(self) -> Dict:
         try:
             with httpx.Client(timeout=REQUEST_TIMEOUT) as client:
                 r = client.get(f"{self.local_api}/quotes/stats")
                 r.raise_for_status()
-                stats = r.json()
                 movies_r = client.get(f"{self.local_api}/movies/quotes?limit=60")
                 games_r = client.get(f"{self.local_api}/games/quotes?limit=20")
                 movies = list(set(q["movie"] for q in movies_r.json()))

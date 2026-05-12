@@ -62,7 +62,7 @@ def to_markdown(filepath: str = typer.Argument(..., help="Путь для Markdo
     path = Path(filepath).expanduser()
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
-        f.write(f"# MediaQuote Export\n\n")
+        f.write("# MediaQuote Export\n\n")
         f.write(f"**Exported at:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n---\n\n")
         for idx, quote in enumerate(favorites, 1):
             f.write(f"## {idx}. {quote['author']}\n\n> {quote['quote']}\n\n")

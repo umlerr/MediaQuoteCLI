@@ -52,9 +52,9 @@ def save_quote(q: Dict) -> Dict:
     with _conn() as con:
         con.execute(
             "INSERT OR REPLACE INTO quotes (id,content,author,source,source_type,tags,api) VALUES (?,?,?,?,?,?,?)",
-            (qid, q.get("content",""), q.get("author","Unknown"),
-             q.get("source",""), q.get("source_type","person"),
-             json.dumps(q.get("tags",[])), q.get("api","local"))
+            (qid, q.get("content", ""), q.get("author", "Unknown"),
+             q.get("source", ""), q.get("source_type", "person"),
+             json.dumps(q.get("tags", [])), q.get("api", "local"))
         )
     q["id"] = qid
     return q

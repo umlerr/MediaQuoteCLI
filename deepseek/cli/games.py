@@ -18,7 +18,8 @@ def random(save: bool = typer.Option(False, "--save", "-s")):
     quote = api.get_random_quote("game")
     if quote:
         panel = Panel(
-            f"[italic]{quote['quote']}[/italic]\n\n[bold cyan]— {quote['author']}[/bold cyan]\n[dim]Игра: {quote['source']}[/dim]",
+            f"[italic]{quote['quote']}[/italic]\n\n[bold cyan]— {quote['author']}"
+            f"[/bold cyan]\n[dim]Игра: {quote['source']}[/dim]",
             title="🎮 Random Game Quote",
             border_style="magenta"
         )

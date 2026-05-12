@@ -38,7 +38,8 @@ def random(
 
     if quote:
         panel = Panel(
-            f"[italic]{quote['quote']}[/italic]\n\n[bold cyan]— {quote['author']}[/bold cyan]\n[dim]Источник: {quote['source']} ({quote['content_type']})[/dim]",
+            f"[italic]{quote['quote']}[/italic]\n\n[bold cyan]— {quote['author']}"
+            f"[/bold cyan]\n[dim]Источник: {quote['source']} ({quote['content_type']})[/dim]",
             title="🎬 MediaQuote",
             border_style="green",
             padding=(1, 2)

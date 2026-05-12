@@ -1,7 +1,8 @@
 """Избранное и оценки"""
 import typer
+
+from ..formatters import fmt_panel, console
 from ..storage import add_favorite, list_favorites, rate_quote, get_rating, get_quote
-from ..formatters import fmt_panel, fmt_table, console
 
 fav_app = typer.Typer(no_args_is_help=True, help="Избранные цитаты")
 rate_app = typer.Typer(no_args_is_help=True, help="Оценка цитат")
@@ -12,7 +13,7 @@ def cmd_fav_add(quote_id: str = typer.Argument(...)):
     """POST /quotes/{id}/favorite"""
     q = get_quote(quote_id)
     if not q:
-        console.print(f"[red]Сначала сохрани цитату: quotes random --save[/red]")
+        console.print("[red]Сначала сохрани цитату: quotes random --save[/red]")
         raise typer.Exit(1)
     add_favorite(quote_id)
     console.print(f"[green]⭐ Добавлено в избранное: {quote_id}[/green]")
@@ -31,8 +32,8 @@ def cmd_fav_list():
 
 @rate_app.command("set")
 def cmd_rate(
-    quote_id: str = typer.Argument(...),
-    score: int = typer.Argument(..., help="Оценка 1-5"),
+        quote_id: str = typer.Argument(...),
+        score: int = typer.Argument(..., help="Оценка 1-5"),
 ):
     """POST /quotes/{id}/rate"""
     if not 1 <= score <= 5:

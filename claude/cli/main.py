@@ -55,7 +55,7 @@ def config(
         cfg.set("api_url", set_api_url)
         console.print(f"[green]✅ API URL: {set_api_url}[/green]")
     if show or not any([set_timeout, set_api_url, reset]):
-        console.print(f"\n[bold cyan]Конфигурация:[/bold cyan]")
+        console.print("\n[bold cyan]Конфигурация:[/bold cyan]")
         console.print(f"  API URL:  [yellow]{cfg.get('api_url')}[/yellow]")
         console.print(f"  Таймаут:  [yellow]{cfg.get('timeout')}s[/yellow]")
         console.print(f"  Verbose:  [yellow]{cfg.get('verbose')}[/yellow]")

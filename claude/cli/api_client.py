@@ -15,9 +15,11 @@ _ZEN_FALLBACK = [
     {"q": "Life is what happens when you're busy making other plans.", "a": "John Lennon"},
     {"q": "The future belongs to those who believe in the beauty of their dreams.", "a": "Eleanor Roosevelt"},
     {"q": "It is during our darkest moments that we must focus to see the light.", "a": "Aristotle"},
-    {"q": "In the end, it's not the years in your life that count. It's the life in your years.", "a": "Abraham Lincoln"},
+    {"q": "In the end, it's not the years in your life that count. It's the life in your years.",
+     "a": "Abraham Lincoln"},
     {"q": "Life is either a daring adventure or nothing at all.", "a": "Helen Keller"},
-    {"q": "Many of life's failures are people who did not realize how close they were to success when they gave up.", "a": "Thomas Edison"},
+    {"q": "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+     "a": "Thomas Edison"},
 ]
 
 
@@ -99,9 +101,12 @@ def movie_random() -> Optional[Dict]:
 def movie_list(movie=None, character=None, search=None, limit=20) -> List[Dict]:
     try:
         params = {"limit": limit}
-        if movie: params["movie"] = movie
-        if character: params["character"] = character
-        if search: params["search"] = search
+        if movie:
+            params["movie"] = movie
+        if character:
+            params["character"] = character
+        if search:
+            params["search"] = search
         r = httpx.get(f"{API_URL}/movies/quotes", params=params, timeout=TIMEOUT)
         r.raise_for_status()
         return [_from_movie(q) for q in r.json()]
@@ -130,9 +135,12 @@ def game_random() -> Optional[Dict]:
 def game_list(game=None, character=None, search=None, limit=20) -> List[Dict]:
     try:
         params = {"limit": limit}
-        if game: params["game"] = game
-        if character: params["character"] = character
-        if search: params["search"] = search
+        if game:
+            params["game"] = game
+        if character:
+            params["character"] = character
+        if search:
+            params["search"] = search
         r = httpx.get(f"{API_URL}/games/quotes", params=params, timeout=TIMEOUT)
         r.raise_for_status()
         return [_from_game(q) for q in r.json()]
