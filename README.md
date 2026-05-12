@@ -175,7 +175,7 @@ pytest tests/tests_deepseek/ -v
 ### Claude — поиск по ключевому слову
 ![Claude search](docs/claude/screenshots/3.png)
 
-### Claude — цитаты из фильма
+### Claude — статистика
 ![Claude movies](docs/claude/screenshots/4.png)
 
 ### Claude — тесты
